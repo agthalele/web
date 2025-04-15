@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px
+    }
+
+    .info-div div {
+        margin: 20px;
+    }
+
+    .info-div div img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .tarefa-div {
+        display: none !important; /* já está certo se quiser esconder */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 30px;
+    }
+
+    .info-div div {
+        margin: 20px;
+        font-size: 5px;
+    }
+
+    .info-div div img {
+        width: 150px;
+        height: 150px;
+    }
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover {
+    color: black;
+    -webkit-text-stroke: 1px white;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.fundo {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://images.steamusercontent.com/ugc/940586530515504757/CDDE77CB810474E1C07B945E40AE4713141AFD76/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.35);
+    position: fixed;
+    z-index: -1;
+}
+
+.tarefa-div {
+    margin: 10vh 5vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    overflow: auto;
+    max-height: 70vh;
+}
+
+.tarefa-div::-webkit-scrollbar {
+    display: none;
+}
+
+.info-div div {
+    margin: 10vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+}
+
+.info-div div img {
+    margin: 15px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
